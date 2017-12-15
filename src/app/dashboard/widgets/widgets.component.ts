@@ -1,15 +1,14 @@
 
-
 import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
 
-import {GridsterItem} from '../../lib';
-import {GridsterConfigS} from '../../lib/gridsterConfigS.interface';
+import {GridsterItem} from '../../../lib';
+import {GridsterConfigS} from '../../../lib/gridsterConfigS.interface';
 
 @Component({
   selector: 'app-widgets',
   templateUrl: './widgets.component.html',
   styleUrls: ['./widgets.component.css']
-  changeDetection: ChangeDetectionStrategy.OnPush
+  // changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class WidgetsComponent implements OnInit {
   options: GridsterConfigS;

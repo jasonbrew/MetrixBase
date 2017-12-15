@@ -1,6 +1,6 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {NgModule} from '@angular/core';
+import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import {FormsModule} from '@angular/forms';
 import 'hammerjs';
 import {
@@ -9,7 +9,13 @@ import {
   MatSelectModule,
   MatInputModule,
   MatTooltipModule,
-  MatCheckboxModule, MatSidenavModule
+  MatCheckboxModule, 
+  MatSidenavModule,
+  MatToolbarModule,
+  MatCardModule,
+  MatMenuModule,
+  MatGridListModule,
+  MatSlideToggleModule,
 } from '@angular/material';
 
 import {AppComponent} from './app.component';
@@ -29,7 +35,7 @@ import { NavComponent } from './dashboard/nav/nav.component';
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
-    MatIconModule, MatButtonModule, MatSelectModule, MatInputModule, MatTooltipModule, MatCheckboxModule, MatSidenavModule,
+    MatIconModule, MatButtonModule, MatSelectModule, MatInputModule, MatTooltipModule, MatCheckboxModule, MatSidenavModule, MatIconModule, MatToolbarModule,
     GridsterModule
   ],
   providers: [],
