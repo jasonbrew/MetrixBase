@@ -15,11 +15,13 @@ import {
 import {AppComponent} from './app.component';
 import {GridsterModule} from '../lib';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { WidgetsComponent } from './dashboard/widgets/widgets.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DashboardComponent
+    DashboardComponent,
+    WidgetsComponent
   ],
   imports: [
     BrowserModule,
