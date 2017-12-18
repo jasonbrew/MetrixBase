@@ -19,12 +19,12 @@
 
 .column {
   height: 100%;
-  border-left: 1px solid white;
-  border-right: 1px solid white;
+  border-left: 0px solid white;
+  border-right: 0px solid white;
 }
 
 .row {
   width: 100%;
-  border-top: 1px solid white;
-  border-bottom: 1px solid white;
+  border-top: 0px solid white;
+  border-bottom: 0px solid white;
 }

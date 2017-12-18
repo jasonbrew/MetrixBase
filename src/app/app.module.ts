@@ -15,7 +15,7 @@ import {
   MatCardModule,
   MatMenuModule,
   MatGridListModule,
-  MatSlideToggleModule,
+  MatSlideToggleModule, MatExpansionModule,
 } from '@angular/material';
 
 import {AppComponent} from './app.component';
@@ -31,11 +31,12 @@ import { NavComponent } from './dashboard/nav/nav.component';
     WidgetsComponent,
     NavComponent
   ],
+
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
-    MatIconModule, MatButtonModule, MatSelectModule, MatInputModule, MatTooltipModule, MatCheckboxModule, MatSidenavModule, MatIconModule, MatToolbarModule,
+    MatIconModule, MatButtonModule, MatSelectModule, MatInputModule, MatTooltipModule, MatCheckboxModule, MatSidenavModule, MatIconModule, MatToolbarModule, MatExpansionModule
     GridsterModule
   ],
   providers: [],
