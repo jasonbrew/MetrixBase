@@ -16,6 +16,7 @@ import {
   MatMenuModule,
   MatGridListModule,
   MatSlideToggleModule, MatExpansionModule,
+  MatTableModule
 } from '@angular/material';
 
 import {AppComponent} from './app.component';
@@ -23,21 +24,24 @@ import {GridsterModule} from '../lib';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { WidgetsComponent } from './dashboard/widgets/widgets.component';
 import { NavComponent } from './dashboard/nav/nav.component';
+import { GridComponent } from './dashboard/grid/grid.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
     WidgetsComponent,
-    NavComponent
+    NavComponent,
+    GridComponent
   ],
 
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
-    MatIconModule, MatButtonModule, MatSelectModule, MatInputModule, MatTooltipModule, MatCheckboxModule, MatSidenavModule, MatIconModule, MatToolbarModule, MatExpansionModule
-    GridsterModule
+    MatTableModule, MatIconModule, MatButtonModule, MatSelectModule, MatInputModule, MatTooltipModule, MatCheckboxModule, MatSidenavModule, MatIconModule, MatToolbarModule, MatExpansionModule,
+    GridsterModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
