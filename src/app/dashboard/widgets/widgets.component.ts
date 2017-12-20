@@ -15,6 +15,15 @@ export class WidgetsComponent implements OnInit {
   dashboard: Array<GridsterItem>;
   remove: boolean;
 
+  aorCurrent: number = 415;
+  aorDayGrowth: number = 9;
+  aorWeekGrowth: number = -21;
+  aorMonthGrowth: number = +39;
+  //       "customerCountCurrent": 384,
+  //       "customerCountDayGrowth": 8,
+  //       "customerCountWeekGrowth": 17,
+  //       "customerCountMonthGrowth": 35
+
   static eventStop(item, itemComponent, event) {
     console.info('eventStop', item, itemComponent, event);
   }
@@ -128,11 +137,12 @@ export class WidgetsComponent implements OnInit {
       disableWarnings: false,
     };
 
+    
     this.dashboard = [
-      {cols: 1, rows: 1, y: 0, x: 0, hasContent: false, label: 'CUSTOMER', content: '3+/-'},
+      {cols: 1, rows: 1, y: 0, x: 0, hasContent: false, label: 'CUSTOMER', content: 'custvalue' },
       {cols: 1, rows: 1, y: 0, x: 1, hasContent: false, label: 'DELIVERIES', content: '12'},
       {cols: 1, rows: 1, y: 0, x: 2, hasContent: false, label: 'COLLECTED', content: '$120,345'},
-      {cols: 1, rows: 1, y: 1, x: 0, hasContent: false, label: 'AOR',  content: '356'},
+      {cols: 1, rows: 1, y: 1, x: 0, hasContent: false, label: 'AOR',  content: this.aorCurrent, content1: this.aorDayGrowth, content2: this.aorWeekGrowth , content3: this.aorMonthGrowth, },
       {cols: 1, rows: 1, y: 1, x: 1, hasContent: false, label: 'SMRR', content: '444'},
       {cols: 1, rows: 1, y: 1, x: 2, hasContent: false, label: 'LATE',  content: '18%'},
       /*{cols: 2, rows: 2, y: 3, x: 5, minItemRows: 2, minItemCols: 2, hasContent: true, label: 'Min rows & cols = 2'},

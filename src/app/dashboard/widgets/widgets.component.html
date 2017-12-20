@@ -17,7 +17,7 @@
             <mat-icon>delete</mat-icon>
           </button>
         </div>
-        <label *ngIf="!item.hasContent">{{item.label}}</label><label *ngIf="!item.hasContent">{{item.content}}</label>
+        <label *ngIf="!item.hasContent">{{item.label}}</label><label *ngIf="!item.hasContent">{{item.content}} | {{item.content1}} | {{item.content2}} | {{item.content3}}</label>
         <button mat-mini-fab *ngIf="!item.hasContent" (mousedown)="removeItem($event, item)"
                 (touchstart)="removeItem($event, item)" matTooltip="Remove">
           <mat-icon>delete</mat-icon>
