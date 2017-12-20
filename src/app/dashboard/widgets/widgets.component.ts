@@ -8,7 +8,7 @@ import {GridsterConfigS} from '../../../lib/gridsterConfigS.interface';
   selector: 'app-widgets',
   templateUrl: './widgets.component.html',
   styleUrls: ['./widgets.component.css']
-  // changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class WidgetsComponent implements OnInit {
   options: GridsterConfigS;
@@ -16,7 +16,7 @@ export class WidgetsComponent implements OnInit {
   remove: boolean;
 
   aorCurrent: number = 415;
-  aorDayGrowth: number = 9;
+  aorDayGrowth: number = +9;
   aorWeekGrowth: number = -21;
   aorMonthGrowth: number = +39;
   //       "customerCountCurrent": 384,
@@ -139,17 +139,17 @@ export class WidgetsComponent implements OnInit {
 
     
     this.dashboard = [
-      {cols: 1, rows: 1, y: 0, x: 0, hasContent: false, label: 'CUSTOMER', content: 'custvalue' },
-      {cols: 1, rows: 1, y: 0, x: 1, hasContent: false, label: 'DELIVERIES', content: '12'},
-      {cols: 1, rows: 1, y: 0, x: 2, hasContent: false, label: 'COLLECTED', content: '$120,345'},
-      {cols: 1, rows: 1, y: 1, x: 0, hasContent: false, label: 'AOR',  content: this.aorCurrent, content1: this.aorDayGrowth, content2: this.aorWeekGrowth , content3: this.aorMonthGrowth, },
-      {cols: 1, rows: 1, y: 1, x: 1, hasContent: false, label: 'SMRR', content: '444'},
-      {cols: 1, rows: 1, y: 1, x: 2, hasContent: false, label: 'LATE',  content: '18%'},
-      /*{cols: 2, rows: 2, y: 3, x: 5, minItemRows: 2, minItemCols: 2, hasContent: true, label: 'Min rows & cols = 2'},
-      {cols: 2, rows: 2, y: 2, x: 0, maxItemRows: 2, maxItemCols: 2, hasContent: true, label: 'Max rows & cols = 2'},
-      {cols: 2, rows: 1, y: 2, x: 2, dragEnabled: true, resizeEnabled: true, hasContent: true, label: 'Test'},
-      {cols: 1, rows: 1, y: 2, x: 4, dragEnabled: true, resizeEnabled: false, label: 'Deliveries'},
-      {cols: 1, rows: 1, y: 2, x: 6, initCallback: WidgetsComponent.itemInit, hasContent: true, hasContent: true, label: 'Min rows & cols = 2'}*/
+      {cols: 1, rows: 1, y: 0, x: 0, label: 'CUSTOMER', content: 'custvalue' },
+      {cols: 1, rows: 1, y: 0, x: 1, label: 'DELIVERIES', content: '12'},
+      {cols: 1, rows: 1, y: 0, x: 2, label: 'COLLECTED', content: '$120,345'},
+      {cols: 1, rows: 1, y: 1, x: 0, label: 'AOR',  content: this.aorCurrent, content1: this.aorDayGrowth, content2: this.aorWeekGrowth , content3: this.aorMonthGrowth, },
+      {cols: 1, rows: 1, y: 1, x: 1, label: 'SMRR', content: '444'},
+      {cols: 1, rows: 1, y: 1, x: 2, label: 'LATE',  content: '18%'},
+      {cols: 3, rows: 2, y: 2, x: 0, minItemRows: 2, minItemCols: 12, label: 'List', },
+      // {cols: 2, rows: 2, y: 2, x: 0, maxItemRows: 2, maxItemCols: 2, hasContent: true, label: 'Max rows & cols = 2'},
+      // {cols: 2, rows: 1, y: 2, x: 2, dragEnabled: true, resizeEnabled: true, hasContent: true, label: 'Test'},
+      // {cols: 1, rows: 1, y: 2, x: 4, dragEnabled: true, resizeEnabled: false, label: 'Deliveries'},
+      // {cols: 1, rows: 1, y: 2, x: 6, initCallback: WidgetsComponent.itemInit, hasContent: true, hasContent: true, label: 'Min rows & cols = 2'}
     ];
   }
 
