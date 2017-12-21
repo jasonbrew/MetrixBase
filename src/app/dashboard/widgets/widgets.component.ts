@@ -3,12 +3,13 @@ import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
 
 import {GridsterItem} from '../../../lib';
 import {GridsterConfigS} from '../../../lib/gridsterConfigS.interface';
+import { GridComponent } from 'app/dashboard/grid/grid.component';
 
 @Component({
   selector: 'app-widgets',
   templateUrl: './widgets.component.html',
   styleUrls: ['./widgets.component.css']
-  changeDetection: ChangeDetectionStrategy.OnPush
+  // changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class WidgetsComponent implements OnInit {
   options: GridsterConfigS;
@@ -145,7 +146,7 @@ export class WidgetsComponent implements OnInit {
       {cols: 1, rows: 1, y: 1, x: 0, label: 'AOR',  content: this.aorCurrent, content1: this.aorDayGrowth, content2: this.aorWeekGrowth , content3: this.aorMonthGrowth, },
       {cols: 1, rows: 1, y: 1, x: 1, label: 'SMRR', content: '444'},
       {cols: 1, rows: 1, y: 1, x: 2, label: 'LATE',  content: '18%'},
-      {cols: 3, rows: 2, y: 2, x: 0, minItemRows: 2, minItemCols: 12, label: 'List', },
+      {cols: 3, rows: 2, y: 2, x: 0, minItemRows: 2, minItemCols: 12, hasContent: true, label: 'List' },
       // {cols: 2, rows: 2, y: 2, x: 0, maxItemRows: 2, maxItemCols: 2, hasContent: true, label: 'Max rows & cols = 2'},
       // {cols: 2, rows: 1, y: 2, x: 2, dragEnabled: true, resizeEnabled: true, hasContent: true, label: 'Test'},
       // {cols: 1, rows: 1, y: 2, x: 4, dragEnabled: true, resizeEnabled: false, label: 'Deliveries'},
